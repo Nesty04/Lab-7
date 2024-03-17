@@ -3,6 +3,7 @@ import numpy as np
 from time import perf_counter
 from random import random
 import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
 
 def time_comparison():
     a = []
@@ -41,6 +42,8 @@ def hist():
     plt.ylabel('частота')
     plt.grid()
     plt.show()
+
+    plt.figure(figsize=(5,5))
 
     plt.hist(arr, bins=20, density=True, color='blue', edgecolor='black')
     plt.title('Выровненная гистогрмма')
