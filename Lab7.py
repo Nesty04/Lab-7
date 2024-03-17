@@ -32,18 +32,20 @@ def time_comparison():
 def hist():
     data = np.genfromtxt('data2.csv', delimiter=',')
     arr = np.array(data[:,2])[1:]
+    
+    plt.figure(figsize=(5,5))
 
-    plt.hist(arr, bins=20)
+    plt.hist(arr, bins=20, color='blue', edgecolor='black')
     plt.title('Гистограмма')
-    plt.xlabel('num')
-    plt.ylabel('Solids')
+    plt.xlabel('значения')
+    plt.ylabel('частота')
     plt.grid()
     plt.show()
 
-    plt.hist(arr, bins=20, density=True)
-    plt.title('Нормализованная гистогрмма')
-    plt.xlabel('num')
-    plt.ylabel('Solids')
+    plt.hist(arr, bins=20, density=True, color='blue', edgecolor='black')
+    plt.title('Выровненная гистогрмма')
+    plt.xlabel('значения')
+    plt.ylabel('частота')
     plt.grid()
     plt.show()
 
